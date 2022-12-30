@@ -1,44 +1,17 @@
-// let page = 1;
-// let lastPage = 7;
-// let lastPage = document.querySelector('.content').length;
-// console.log(lastPage)
-// const body = document.querySelector('.body')
+let page = 1;
+// let lastPage = document.getElementsByClassName("content").length;
+let lastPage = 4;
 
-// body.addEventListener('wheel', function(e) {
-//     if (e.originalEvent.deltaY > 0) {
-//         if(page==lastPage) return;
-//         page++;
-//     }
-//     else if (e.originalEvent.deltaY < 0) {
-//         if(page==1) return;
-//         page++;
-//     }
-//     let posTop = (page-1) * (body).height();
-//     console.log(posTop);
-// })
-
-
-
-
-var $html = $("html");
-var page = 1;
-var lastPage = $(".content").length;
-
-$html.animate({ scrollTop: 0 }, 10);
-
-$(window).on("wheel", function (e) {
-  if ($html.is(":animated")) return;
-
-  if (e.originalEvent.deltaY > 0) {
-    if (page == lastPage) return;
-
+window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+window.addEventListener("wheel", (e) => {
+  if (e.deltaY > 0) {
+    if (page == 4) return;
     page++;
-  } else if (e.originalEvent.deltaY < 0) {
+  } else if (e.deltaY < 0) {
     if (page == 1) return;
-
     page--;
-  }
-  var posTop = (page - 1) * $(window).height();
-
-  $html.animate({ scrollTop: posTop });
+  } 
+  let posTop = (page - 1) * window.innerHeight;
+  console.log(posTop);
+  window.scrollTo({ top: posTop, left: 0, behavior: 'smooth' });
 });

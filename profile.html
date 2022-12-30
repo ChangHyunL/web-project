@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>자기소개 페이지</title>
     <link rel="stylesheet" href="profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="scroll.js" defer></script>
+    <script src="chart.js" defer></script>
+    <!-- <script src="getJson.js" defer></script> -->
 </head>
 
 <body>
@@ -15,7 +19,7 @@
             <li><a href="profile.html">프로필</a></li>
             <li><a href="career.html">학력&경력</a></li>
             <li><a href="skill.html">역량</a></li>
-            <li><a href="personality.html">성격</a></li>
+            <li><a href="personal.html">성격</a></li>
         </ul>
     </header>
     <main class="main">
@@ -50,11 +54,45 @@
                 </ul>
             </div>
         </div>
+        <div class="career">
+            <h2>About My Career</h2>
+            <div class="career__list">
+                <ul>
+                    <h3>2022-11 ~ </h3>
+                    <h4>엘리스 IoT트랙 1기 수강 중</h4>
+                    <div><img src="./assets/elice.png" alt="elice"></div>
+                    <p>웹프로그래밍과 IoT기술에 대해 배우고 있습니다.</p>
+                </ul>
+                <ul>
+                    <h3>2022-04 ~ 2022-08</h3>
+                    <h4>창업경진대회 참가 & 멘토링</h4>
+                    <div><img src="./assets/startup.jpg" alt="startup"></div>
+                    <p>창업시장에 대한 전반적인 지식을 배웠습니다.</p>
+                </ul>
+                <ul>
+                    <h3>2019-03 ~ </h3>
+                    <h4>단국대학교 소프트웨어학과 재학 중</h4>
+                    <div><img src="./assets/dku.jpg" alt="dku"></div>
+                    <p>프로그래밍에 대한 전반적인 지식을 배우고 있습니다.</p>
+                </ul>
+            </div>
+        </div>
+        <div class="skill">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="personal">
+            <h2>버튼을 눌러 결과를 확인해보세요</h2>
+            <button class="button">좋아하는 거</button>
+            <button class="button">좋아하는 음식</button>
+            <button class="button">취미</button>
+            <button class="button">좋아하는 말</button>
+            <button class="button">하고싶은 말</button>
+            <p id="result"></p>
+        </div>
     </main>
     <footer class="footer">
         <p>Copywrite 2022. LeeChangHyun. all rights reserved.</p>
     </footer>
-    <script src="index.js"></script>
 </body>
 
 </html>
