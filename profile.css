@@ -9,9 +9,6 @@ a {
 li {
   list-style: none;
 }
-body {
-  background-color: #ece6cc10;
-}
 
 html {
   overflow: hidden;
@@ -24,11 +21,12 @@ body {
 }
 
 .header {
-  width: 100%;
+  width: 100vw;
   height: 100px;
   position: fixed;
   top: 0px;
   left: 0px;
+  background-color: #ece6cc10;
 }
 
 .header > ul {
@@ -53,12 +51,9 @@ body {
   padding: 0 10px 0 10px;
 }
 
-.header > ul > li > a {
-  color: black;
-}
-
 .main {
   width: 100%;
+  height: calc(100vh - 180px);
   margin: 100px auto;
   box-sizing: border-box;
 }
@@ -66,59 +61,69 @@ body {
 .main > .profile {
   display: flex;
   width: 100%;
-  height: auto;
-  margin: 10px 0px;
+  height: 100%;
+  background-color: beige;
 }
 
-.main > .profile > .picture_box {
+.main > .profile > .picture__box {
   width: 50%;
-  height: 500px;
+  height: 100%;
   float: left;
   text-align: center;
-  margin-top: 30px;
+  margin: auto;
 }
 
-.main > .profile > .picture_box > h2,
+.main > .profile > .picture__box > h2,
 h3 {
   margin: 10px;
 }
 
-.main > .profile > .picture_box > img {
+.main > .profile > .picture__box > img {
   width: 40%;
   height: 60%;
   border-radius: 50%;
   margin: 10px 0 20px 0;
 }
 
-.mian > .profile > .picture_box > p {
+.mian > .profile > .picture__box > p {
   text-align: start;
 }
 
-.main > .profile > .info_box {
+.main > .profile > .info__box {
   width: 50%;
-  height: 500px;
+  height: 100%;
   float: right;
-  margin-top: 30px;
-}
-.main > .profile > .info_box > ul div {
-  width: 100%;
-  height: 125px;
   display: flex;
 }
-.main > .profile > .info_box > ul div div {
-  width: 125px;
+
+.main > .profile > .info__box > .img__box {
+  width: 15%;
+  height: 100%;
 }
 
-.main > .profile > .info_box > ul div div img {
-  width: 100px;
-  height: 100px;
-}
-
-.main > .profile > .info_box > ul li {
+.main > .profile > .info__box > .img__box > div {
   width: 100%;
-  height: 125px;
+  height: 25%;
+}
+
+.main > .profile > .info__box > .img__box > div > img {
+  width: 90%;
+  height: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.main > .profile > .info__box > .my__info {
+  width: 85%;
+  height: 100%;
+}
+
+.main > .profile > .info__box > .my__info > div {
+  width: 100%;
+  height: 25%;
   font-size: 18px;
-  margin: 40px 30px;
+  padding-left: 5%;
+  padding-top: 7.5%;
 }
 
 /* ///////////////////////////////////////////////////////// */
@@ -127,6 +132,7 @@ h3 {
   width: 100%;
   height: 100%;
   margin: 180px auto;
+  background-color: aqua;
 }
 
 .main > .career > h2 {
@@ -143,8 +149,7 @@ h3 {
 
 .main > .career > .career__list > ul {
   width: 100%;
-  height: 450px;
-  margin: 0px 20px;
+  height: 100%;
   text-align: center;
 }
 
@@ -164,25 +169,19 @@ h3 {
 }
 
 .main > .career > .career__list > ul > div > img {
-  margin-top: 10px;
+  margin:10px;
   width: 90%;
   height: 90%;
   border-radius: 20px;
-}
-
-.main > .career > .career__list > ul > div > img:hover {
-  animation-name: image;
-  animation-duration: 2s;
-  /* animation-delay: 1s;
-  animation-iteration-count: 1; */
+  animation: image 1.5s infinite linear alternate;
 }
 
 @keyframes image {
   from {
-    height: 0%;
+    transform:rotateY(30deg);
   }
   to {
-    height: 90%;
+    transform:rotateY(-30px);
   }
 }
 
@@ -195,14 +194,15 @@ h3 {
 .main > .skill {
   width: 100%;
   height: 100%;
-  margin: 180px 0px;
   display: flex;
-  margin-left: 20vw;
+  background-color: beige;
+  margin: 180px auto;
 }
 
 .main > .skill > #myChart {
-  width: 60vw;
-  height: 60vh;
+  width: 30vw;
+  height: 30vh;
+  margin: auto;
 }
 
 /* ///////////////////////////////////////////////////////// */
@@ -210,7 +210,8 @@ h3 {
 .main > .personal {
   width: 100%;
   height: 100%;
-  margin: 180px 0px;
+  text-align: center;
+  background-color: aqua;
 }
 
 /* ///////////////// footer ///////////////// */
