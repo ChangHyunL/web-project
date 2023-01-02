@@ -133,6 +133,7 @@ h3 {
   height: 100%;
   margin: 180px auto;
   background-color: aqua;
+  border: 2px dashed #000;
 }
 
 .main > .career > h2 {
