@@ -80,9 +80,9 @@ h3 {
   margin: 10px 0 20px 0;
 }
 
-.mian > .profile > .picture__box > p {
+.main > .profile > .picture__box > p {
   text-align: left;
-  border: 1px solid #000;
+  padding-left: 25%;
 }
 
 .main > .profile > .info__box {
@@ -266,7 +266,7 @@ main > .personal > .slide__page > .slide__wrapper > .slides >li > img {
   float: left;
 }
 
-controls > p#next {
+.controls > p#next {
   float: right;
 }
 
@@ -281,6 +281,7 @@ controls > p#next {
   bottom: 0px;
   left: 0px;
 }
+
 .footer > p {
   margin-top: 40px;
   margin-right: 20px;
