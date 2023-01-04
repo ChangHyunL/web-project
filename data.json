@@ -1,7 +1,27 @@
-{
-  "food": "삽겹살",
-  "hobby": "독서, 운동",
-  "like": "누워있기, 맛있는거 먹기",
-  "word": "시련은 있어도 실패는 없다",
-  "wish": "새해 복 많이 받으세요!"
-}
+[
+  {
+    "type" : "좋아하는 동물",
+    "src" : "./assets/dog.jpg",
+    "content" : "강아지"
+  },
+  {
+    "type" : "좋아하는 음식",
+    "src" : "./assets/삼겹살.jpg",
+    "content" : "삼겹살"
+  },
+  {
+    "type" : "취미",
+    "src" : "./assets/soccer.jpg",
+    "content" : "운동"
+  },
+  {
+    "type" : "꿈",
+    "src" : "./assets/work together.webp",
+    "content" : "함께 일하고 싶은 개발자"
+  },
+  {
+    "type" : "하고싶은 말",
+    "src" : "./assets/Happy New Year.jpg",
+    "content" : "새해 복 많이 받으세요!!"
+  }
+]
