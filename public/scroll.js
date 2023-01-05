@@ -30,6 +30,7 @@ const pages = [
   document.getElementsByClassName("skill")[0],
   document.getElementsByClassName("personal")[0]
 ];
+const pg = document.getElementsByClassName("page");
 
 const scrollSleep = async () =>
   await new Promise((resolve) => setTimeout(() => resolve(), 1));
@@ -59,6 +60,7 @@ window.addEventListener("wheel", (e) => {
 });
 
 function movePage(e) {
+  console.log(e.path[0].id);
   switch (e.path[0].id) {
     case "profile":
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -84,6 +86,6 @@ function movePage(e) {
       return;
   }
 }
-for (i = 0; i < lastPage; i++) {
+for (i = 0; i < pages.length; i++) {
   pg[i].addEventListener("click", movePage);
 }
