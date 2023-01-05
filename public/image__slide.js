@@ -18,4 +18,3 @@ nextBtn.addEventListener("click", () => {
 prevBtn.addEventListener("click", () => {
   if (currentIdx < 0) moveSlide(currentIdx + 1);
 });
-.
