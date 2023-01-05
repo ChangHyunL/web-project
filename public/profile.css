@@ -220,7 +220,7 @@ h3 {
   width: 960px;
   height: 360px;
   margin: auto;
-  transform: translate(0,20%);
+  transform: translate(0, 20%);
 }
 
 main > .personal > .slide__page > .slide__wrapper {
@@ -235,11 +235,11 @@ main > .personal > .slide__page > .slide__wrapper > .slides {
   position: absolute;
   left: 0;
   top: 0;
-  width: 1620px;
+  /* width: 1620px; */
   display: flex;
 }
 
-main > .personal > .slide__page > .slide__wrapper > .slides >li > img {
+main > .personal > .slide__page > .slide__wrapper > .slides > li > img {
   width: 300px;
   height: 300px;
 }
