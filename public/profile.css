@@ -82,7 +82,9 @@ h3 {
 
 .main > .profile > .picture__box > p {
   text-align: left;
-  padding-left: 20%;
+  /* padding-left: 20%; */
+  display: flex;
+  justify-content: center;
 }
 
 .main > .profile > .info__box {
