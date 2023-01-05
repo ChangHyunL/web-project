@@ -16,14 +16,11 @@ window.addEventListener("wheel", (e) => {
     page--;
   }
   let posTop = (page - 1) * window.innerHeight;
-  console.log(posTop);
-  console.log(window.scrollY);
   window.scrollTo({ top: posTop, left: 0, behavior: "smooth" });
   alertTimer = setTimeout(
     () => window.scrollTo({ top: posTop, left: 0, behavior: "smooth" }),
     1000
   );
-  console.log(alertTimer);
 });
 
 function movePage(e) {
