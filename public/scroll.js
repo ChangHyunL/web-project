@@ -87,4 +87,3 @@ function movePage(e) {
 for (i = 0; i < lastPage; i++) {
   pg[i].addEventListener("click", movePage);
 }
-/
