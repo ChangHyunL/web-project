@@ -23,36 +23,6 @@
 //   );
 // });
 
-// function movePage(e) {
-//   switch (e.path[0].id) {
-//     case "profile":
-//       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-//       break;
-//     case "career":
-//       window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" });
-//       break;
-//     case "capability":
-//       window.scrollTo({
-//         top: window.innerHeight * 2,
-//         left: 0,
-//         behavior: "smooth",
-//       });
-//       break;
-//     case "personal":
-//       window.scrollTo({
-//         top: window.innerHeight * 3,
-//         left: 0,
-//         behavior: "smooth",
-//       });
-//       break;
-//     default:
-//       return;
-//   }
-// }
-// for (i = 0; i < lastPage; i++) {
-//   pg[i].addEventListener("click", movePage);
-// }
-
 let page = 1;
 const pages = [
   document.getElementsByClassName("profile")[0],
@@ -87,3 +57,33 @@ window.addEventListener("wheel", (e) => {
   const targetPageYPos = targetPageRect.y;
   smoothScrollEffect(targetPageYPos, targetPageYPos > 0 ? 1 : -1);
 });
+
+function movePage(e) {
+  switch (e.path[0].id) {
+    case "profile":
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+      break;
+    case "career":
+      window.scrollTo({ top: window.innerHeight, left: 0, behavior: "smooth" });
+      break;
+    case "capability":
+      window.scrollTo({
+        top: window.innerHeight * 2,
+        left: 0,
+        behavior: "smooth",
+      });
+      break;
+    case "personal":
+      window.scrollTo({
+        top: window.innerHeight * 3,
+        left: 0,
+        behavior: "smooth",
+      });
+      break;
+    default:
+      return;
+  }
+}
+for (i = 0; i < lastPage; i++) {
+  pg[i].addEventListener("click", movePage);
+}
