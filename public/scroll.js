@@ -87,3 +87,4 @@ window.addEventListener("wheel", (e) => {
   const targetPageYPos = targetPageRect.y;
   smoothScrollEffect(targetPageYPos, targetPageYPos > 0 ? 1 : -1);
 });
+.
